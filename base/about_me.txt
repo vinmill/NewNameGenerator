@@ -1,1 +1,17 @@
-Hi! I'm Calvin I am a former physics major taking CSCI240 for interest. I'm currently a software tester at Healthx and want to expand my programming knowledge. 
+Hi! I'm Calvin I am a former physics major at the College of Wooster
+taking CSCI240 for interest. I'm currently a software tester at a healthcare 
+engagement platform company called Healthx and want to expand my programming 
+knowledge. My goal is to get a masters in applied data science but felt I 
+needed some classical programming fundementals in order to help with that. 
+I see a need for understanding how users behave when interacting with their 
+healthcare information in order to drive how products are built.
+
+"I don't know what they want from me
+It's like the more money we come across
+The more problems we see
+What's goin' on? What's goin' on? (Somebody tell me) What's goin' on?"
+
+- The Notorious B.I.G.
+
+Songwriters: Christopher Wallace / Sean Combs / Mason Betha / Bernard Edwards / Steve Jordan / J Phillips / Nile Gregory Rodgers
+Mo Money Mo Problems lyrics © Sony/ATV Music Publishing LLC, Warner Chappell Music, Inc
