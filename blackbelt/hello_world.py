@@ -18,7 +18,6 @@ def setCol(column):
         col = 1
     else:
         col = 3
-    return col
 
 def getrandomName():
     randomint = r.randint(1, 200)
