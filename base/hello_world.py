@@ -6,12 +6,12 @@ def instructions():
     gnd = input("""
     We are going to select a random name from a list the \n
     top 200 male and female names between 2010-2018. \n\n
-    What gender would you like this name to belong to? \n
+    What gender identity would you like this name to belong to? \n
     1. Male \n
     2. Female\n""")
     return gnd
 
-def setCol(self, column):
+def setCol(column):
     inp = int(column)
     if inp == 1:
         col = 1

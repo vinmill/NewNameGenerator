@@ -82,23 +82,33 @@ class Randy(object):
             # print(f'Processed {line_count} lines.')
 
 def main():
-    gnd = input("""
+    print("""
     Have you ever wondered how writers come up with the unique
     names in their novels, need to name a baby but just don't 
     have enough time, is the name Lucky just not zesty enough
     for your new fur friend? Well look no further. This program
     randomly combines two names to create a new name. These names
     are selected from a list of the top 200 male and female names
-    between the years 2010-2018. You could modify this list and 
-    create a completely new name set. Maybe a roman empire set or 
-    something like that. Anyway. Have fun. \n
-    Please pick 1 or 2:
-    1. Two male names
-    2. Two female names
-    3. Two Medieval names (both genders)\n""")
-    x = Randy()
-    x.gender = gnd
-    print(x.getName())
+    between the years 2010-2018 along with 200 additional medieval 
+    names. You could modify this list and create a completely new 
+    name set. Maybe a roman empire set or something like that. 
+    Anyways. Have fun. \n""")
+    a = True
+    while a == True:
+        gnd = input("""
+        Please pick 1 or 2:
+        1. Two male names
+        2. Two female names
+        3. Two Medieval names (both genders)\n""")
+        x = Randy()
+        x.gender = gnd
+        print(x.getName())
+        keepGoing = input("\nWould you like to keep going? Y/N\n")
+        if keepGoing == "Y" or "y":
+            a = True
+        else:
+            print("\nGoodbye\n")
+            a = False
 
 if __name__ == "__main__":
     main()
