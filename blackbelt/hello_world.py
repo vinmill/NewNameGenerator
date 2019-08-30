@@ -39,12 +39,43 @@ class Randy(object):
 
         return self.__randomName
 
-    def getFirstTwo(self):
-        name = self.getRandomName()
-
-
     def getRandomName(self):
         return self.setRandomName()
+
+    def setFirstTwo(self):
+        name = self.getRandomName()
+        print(name)
+        self.__firstTwo = name[0:2]
+        return self.__firstTwo
+
+    def setSecondEnding(self):
+        letter = self.setFirstTwo()
+        print(letter)
+        letter = letter[1:2]
+        x = True
+        while x:
+            secName = self.getRandomName()
+            count = 0
+            for i in secName:
+                if count == 0:
+                    count +=1
+                elif secName[count] == letter:
+                    if len(secName[count+1:len(secName)]) >= 2:
+                        self.__nameEnding = secName[count+1:len(secName)]
+                        print(secName)
+                        x = False
+                        break
+                    else:
+                        count +=1
+                else:
+                    count +=1
+        return self.__nameEnding
+
+        
+
+
+
+
 
             # print(f'Processed {line_count} lines.')
 
@@ -57,7 +88,7 @@ def main():
     2. Female\n""")
     x = Randy()
     x.gender = gnd
-    print(x.getRandomName())
+    print(x.setSecondEnding())
 
 if __name__ == "__main__":
     main()
