@@ -19,7 +19,7 @@ class Randy(object):
                 self.__gender = 5
         except:
             print("invalid input")
-            self.__gender = 1
+            self.__gender = 5
     
     def getCol(self):
         return self.__gender
