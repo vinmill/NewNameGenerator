@@ -9,19 +9,22 @@ class Randy(object):
         self.setCol(gender)
 
     def setCol(self, gender):
-        if int(gender) == 1:
-            self.__gender = 1
-        elif int(gender) == 2:
-            self.__gender = 3
-        else:
+        try:
+            gender = int(gender)
+            if gender == 1:
+                self.__gender = 1
+            elif gender == 2:
+                self.__gender = 3
+        except:
             print("invalid input")
             self.__gender = 1
-
     
     def getCol(self):
         return self.__gender
 
-    def setrandomName(self):
+    gender = property(fget = getCol, fset = setCol)
+
+    def setRandomName(self):
         randomint = r.randint(1, 200)
         col =  self.getCol()
         with open('names.txt') as nmz:
@@ -36,8 +39,12 @@ class Randy(object):
 
         return self.__randomName
 
-    def getrandomName(self):
-        return self.setrandomName()
+    def getFirstTwo(self):
+        name = self.getRandomName()
+
+
+    def getRandomName(self):
+        return self.setRandomName()
 
             # print(f'Processed {line_count} lines.')
 
@@ -50,7 +57,7 @@ def main():
     2. Female\n""")
     x = Randy()
     x.gender = gnd
-    print(x.getrandomName())
+    print(x.getRandomName())
 
 if __name__ == "__main__":
     main()
