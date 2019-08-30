@@ -15,6 +15,8 @@ class Randy(object):
                 self.__gender = 1
             elif gender == 2:
                 self.__gender = 3
+            elif gender == 3:
+                self.__gender = 5
         except:
             print("invalid input")
             self.__gender = 1
@@ -42,38 +44,38 @@ class Randy(object):
     def getRandomName(self):
         return self.setRandomName()
 
-    def setFirstTwo(self):
+    def getFirstThree(self):
         name = self.getRandomName()
         print(name)
-        self.__firstTwo = name[0:2]
-        return self.__firstTwo
+        self.__firstLetters = name[0:3]
+        return self.__firstLetters
 
-    def setSecondEnding(self):
-        letter = self.setFirstTwo()
-        print(letter)
-        letter = letter[1:2]
+    def getName(self):
+        firstLetters = self.getFirstThree()
+        endLetter = firstLetters[2:3]
         x = True
         while x:
             secName = self.getRandomName()
             count = 0
-            for i in secName:
-                if count == 0:
-                    count +=1
-                elif secName[count] == letter:
-                    if len(secName[count+1:len(secName)]) >= 2:
-                        self.__nameEnding = secName[count+1:len(secName)]
-                        print(secName)
-                        x = False
-                        break
+            if firstLetters == secName[0:3]:
+                continue
+            else:
+                for i in secName:
+                    if count == 0:
+                        count +=1
+                    elif secName[count] == endLetter:
+                        if len(secName[count+1:len(secName)]) >= 3:
+                            nameEnding = secName[count+1:len(secName)]
+                            print("+\n" + secName + "\n=")
+                            x = False
+                            break
+                        else:
+                            count +=1
                     else:
                         count +=1
-                else:
-                    count +=1
-        return self.__nameEnding
 
-        
-
-
+        self.__fancyName = firstLetters + nameEnding
+        return self.__fancyName
 
 
 
@@ -81,14 +83,22 @@ class Randy(object):
 
 def main():
     gnd = input("""
-    We are going to select a random name from a list the \n
-    top 200 male and female names between 2010-2018. \n\n
-    What gender would you like this name to belong to? \n
-    1. Male \n
-    2. Female\n""")
+    Have you ever wondered how writers come up with the unique
+    names in their novels, need to name a baby but just don't 
+    have enough time, is the name Lucky just not zesty enough
+    for your new fur friend? Well look no further. This program
+    randomly combines two names to create a new name. These names
+    are selected from a list of the top 200 male and female names
+    between the years 2010-2018. You could modify this list and 
+    create a completely new name set. Maybe a roman empire set or 
+    something like that. Anyway. Have fun. \n
+    Please pick 1 or 2:
+    1. Two male names
+    2. Two female names
+    3. Two Medieval names (both genders)\n""")
     x = Randy()
     x.gender = gnd
-    print(x.setSecondEnding())
+    print(x.getName())
 
 if __name__ == "__main__":
     main()
