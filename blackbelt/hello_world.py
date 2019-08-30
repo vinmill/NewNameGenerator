@@ -116,16 +116,15 @@ def main():
     names. You could modify this list and create a completely new 
     name set. Maybe a roman empire set or something like that. 
     Anyways. Have fun. \n""")
-    a = True
-    while a == True:
-        gnd = input("""
-        Please pick 1 or 2:
-        1. Two male names
-        2. Two female names
-        3. Two Medieval names (both genders)\n""")
-        x = Randy()
-        x.gender = gnd
-        print(x.getName())
+
+    gnd = input("""
+    Please pick 1, 2, or 3:
+    1. Two male names
+    2. Two female names
+    3. Two Medieval names (both genders)\n""")
+    x = Randy()
+    x.gender = gnd
+    print(x.getName())
 
 if __name__ == "__main__":
     main()
