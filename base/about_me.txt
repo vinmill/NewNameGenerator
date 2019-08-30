@@ -1,10 +1,12 @@
 Hi! I'm Calvin I am a former physics major at the College of Wooster
 taking CSCI240 for interest. I'm currently a software tester at a healthcare 
-engagement platform company called Healthx and want to expand my programming 
-knowledge. My goal is to get a masters in applied data science but felt I 
-needed some classical programming fundementals in order to help with that. 
+engagement platform company called Healthx. I have some experience with 
+creating automated tests and want to expand my programming knowledge. 
+My goal is to get a masters in applied data science but felt I 
+needed some classical programming knowledge in order to help with that. 
 I see a need for understanding how users behave when interacting with their 
-healthcare information in order to drive how products are built.
+healthcare information in order to drive how products are built. Also, I find 
+foonerism spunny.
 
 "I don't know what they want from me
 It's like the more money we come across
