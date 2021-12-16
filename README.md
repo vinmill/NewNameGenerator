@@ -1,1 +1,1 @@
-# csci24000_fall2019_A1
+New name generator
